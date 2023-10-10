@@ -31,7 +31,7 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty]
     bool isRunning;
 
-    // timer feels unresponsive because this is sync?
+    // timer reset feels unresponsive because this is sync?
     private void SetTimer()
     {
         aTimer = new System.Timers.Timer(100);
