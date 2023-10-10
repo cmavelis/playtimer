@@ -13,7 +13,7 @@
         ColumnSpacing="10"
         >
         <Image Source="pizza.jpg" Grid.ColumnSpan="3" BackgroundColor="Transparent"></Image>
-        <Label Grid.Row="1" FontSize="24" Text="{Binding Path=Elapsed, StringFormat='time is {0:mmss}'}"></Label>
+        <Label Grid.Row="1" FontSize="24" Text="{Binding Path=Elapsed, StringFormat='time is {0:mm\\:ss}'}"></Label>
         <Button Grid.Row="1" Grid.Column="1" Text="Clear" Command="{Binding StartCommand}"/>
         <Button Grid.Row="1" Grid.Column="2" Text="Create" Command="{Binding RecordCommand}"/>
         <Entry Placeholder="Enter text" Grid.Row="2" Grid.ColumnSpan="2" Text="{Binding Text}"/>
@@ -51,7 +51,7 @@
                         <Frame>
                            <Grid ColumnDefinitions=".05*, .05*">
                                 <Label Text="{Binding Name}" FontSize="24"/>
-                                <Label Grid.Column="1" Text="{Binding Time}" FontSize="24"/>
+                                <Label Grid.Column="1" Text="{Binding Path=Time, StringFormat='{0:mm\\:ss}'}" FontSize="24"/>
                             </Grid>
                         </Frame>
                     </Grid>
