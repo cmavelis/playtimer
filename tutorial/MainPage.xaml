@@ -6,16 +6,17 @@
              x:DataType="viewmodel:MainViewModel">
 
     <Grid
-        RowDefinitions="100, Auto, *"
+        RowDefinitions="100, Auto, Auto, *"
         ColumnDefinitions="0.75*, 0.25*"
         Padding="10"
         RowSpacing="10"
         ColumnSpacing="10"
         >
         <Image Source="pizza.jpg" Grid.ColumnSpan="2" BackgroundColor="Transparent"></Image>
-        <Entry Placeholder="Enter text" Grid.Row="1" Text="{Binding Text}"/>
-        <Button Text="Add" Grid.Column="1" Grid.Row="1" Command="{Binding AddCommand}"></Button>
-        <CollectionView Grid.Row="2" Grid.ColumnSpan="2" ItemsSource="{Binding Items}">
+        <Label Grid.Row="1" Grid.ColumnSpan="2" FontSize="24" Text="{Binding Elapsed}"></Label>
+        <Entry Placeholder="Enter text" Grid.Row="2" Text="{Binding Text}"/>
+        <Button Text="Add" Grid.Column="1" Grid.Row="2" Command="{Binding AddCommand}"></Button>
+        <CollectionView Grid.Row="3" Grid.ColumnSpan="2" ItemsSource="{Binding Items}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Type x:String}">
                     <SwipeView>
